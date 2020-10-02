@@ -1,0 +1,30 @@
+footer {
+    padding: 80px 0;
+    background-color: rgba(57, 55, 55, .55);
+}
+
+.footer_box {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1170px;
+    color: #FFF;
+    justify-content: space-between;
+}
+
+.footer_box a {
+    color: #FFF;
+}
+
+.footer_box__left, .footer_box__right {
+    text-align: left;
+}
+
+.footer_box__center {
+    display: flex;
+    width: 92px;
+    justify-content: space-between;
+}
+
+.footer_box__center img:hover {
+    cursor: pointer;
+}
