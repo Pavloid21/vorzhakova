@@ -9,6 +9,9 @@
     position: absolute;
     width: 100%;
     z-index: 2;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    top: 0;
 }
 
 .header-body {

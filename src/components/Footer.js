@@ -1,6 +1,10 @@
 import React from 'react';
 import '../styles/footer.css'
 
+import vk from '../resources/icons/vk.svg'
+import insta from '../resources/icons/insta.svg'
+import facebook from '../resources/icons/facebook.svg'
+
 class Footer extends React.Component {
     render() {
         return (
@@ -11,9 +15,9 @@ class Footer extends React.Component {
                         <a href="#">Политика конфиденциальности</a>
                     </div>
                     <div className="footer_box__center">
-                        <img src="icons/vk.svg" alt="vk" />
-                        <img src="icons/insta.svg" alt="insta" />
-                        <img src="icons/facebook.svg" alt="facebook" />
+                        <img src={vk} alt="vk" />
+                        <img src={insta} alt="insta" />
+                        <img src={facebook} alt="facebook" />
                     </div>
                     <div className="footer_box__right">
                         vorzhakova.photo@mail.ru<br />
