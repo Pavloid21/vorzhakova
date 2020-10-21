@@ -16,6 +16,9 @@ class Home extends React.Component {
                 {image: 'carousel/img5.png'},
             ]
         }
+        this.items = this.state.imgList.map((img, i) => {
+            return <img className="runner_img" key={`carousel_${i}`} src={img.image} alt="IMG"></img>
+        })
     }
     render() {
         return (
@@ -35,12 +38,14 @@ class Home extends React.Component {
                     <div className="runner-box">
                         <AliceCarousel 
                             autoPlay
-                            autoPlayInterval={1000}
-                            fadeOutAnimation 
-                            touchTrackingEnabled
-                            buttonsDisabled
-                            dotsDisabled
+                            autoPlayInterval={2000}
+                            animationType="fadeout" 
+                            disableButtonsControls
+                            disableDotsControls
                             responsive={{
+                                320: {
+                                    items: 1
+                                },
                                 900: {
                                     items: 3
                                 },
@@ -48,22 +53,20 @@ class Home extends React.Component {
                                     items: 5
                                 }
                             }}
+                            items={this.items}
                         >
-                            {
-                                this.state.imgList.map((img, i) => {
-                                    return <img className="runner_img" key={`carousel_${i}`} src={img.image} alt="IMG"></img>
-                                })
-                            }
                         </AliceCarousel>
                     </div>
                     <div className="credo">
-                        <img className="credo_img" src="credo.png" alt="IMG" />
-                        <div className="credo_text">
-                            «Фотография – это способ чувствовать, трогать, любить.<br />
-                            То, что вы поймали на пленке, запечатлено навсегда …<br />
-                            Оно помнит мелочи, даже после того, как Вы всё забыли ».<br />
-                            – Аарон Сискинд
+                        <div className="container">
+                            <img className="credo_img" src="credo.png" alt="IMG" />
+                            <div className="credo_text">
+                                «Фотография – это способ чувствовать, трогать, любить.<br />
+                                То, что вы поймали на пленке, запечатлено навсегда …<br />
+                                Оно помнит мелочи, даже после того, как Вы всё забыли ».<br />
+                                – Аарон Сискинд
 
+                            </div>
                         </div>
                         <Footer />
                     </div>

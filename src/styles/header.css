@@ -46,3 +46,15 @@ ul li {
     display: flex;
     align-items: center;
 }
+
+@media(max-width: 1220px) {
+    .header-body, .container {
+        padding: 0 35px;
+    }
+}
+
+@media(max-width: 800px) {
+    .header li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(5), li:nth-child(6), li:nth-child(7){
+        display: none;
+    }
+}
