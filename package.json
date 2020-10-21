@@ -8,11 +8,12 @@
     "@testing-library/user-event": "^7.2.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
-    "react-alice-carousel": "^2.0.1",
     "react-dom": "^16.13.1",
     "react-infinite-image-link-carousel": "^0.8.43",
+    "react-page-visibility": "^6.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "^3.4.4",
+    "react-ticker": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

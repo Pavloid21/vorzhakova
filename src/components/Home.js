@@ -1,5 +1,6 @@
 import React from 'react';
-import AliceCarousel from 'react-alice-carousel'
+import Ticker from 'react-ticker'
+import PageVisibility from 'react-page-visibility'
 import Footer from './Footer'
 import '../styles/home.css';
 import 'react-alice-carousel/lib/alice-carousel.css'
@@ -14,12 +15,24 @@ class Home extends React.Component {
                 {image: 'carousel/img3.png'},
                 {image: 'carousel/img4.png'},
                 {image: 'carousel/img5.png'},
-            ]
+            ],
+            isVisible: false
         }
         this.items = this.state.imgList.map((img, i) => {
             return <img className="runner_img" key={`carousel_${i}`} src={img.image} alt="IMG"></img>
         })
     }
+
+    handleVisibilityChange = (isVisible) => {
+        this.setState({
+            isVisible: isVisible
+        })
+    }
+
+    componentDidMount() {
+        window.resizeTo(0,0)
+    }
+
     render() {
         return (
             <div className="home">
@@ -36,26 +49,17 @@ class Home extends React.Component {
                         </button>
                     </div>
                     <div className="runner-box">
-                        <AliceCarousel 
-                            autoPlay
-                            autoPlayInterval={2000}
-                            animationType="fadeout" 
-                            disableButtonsControls
-                            disableDotsControls
-                            responsive={{
-                                320: {
-                                    items: 1
-                                },
-                                900: {
-                                    items: 3
-                                },
-                                1300: {
-                                    items: 5
-                                }
-                            }}
-                            items={this.items}
-                        >
-                        </AliceCarousel>
+                    <PageVisibility onChange={this.handleVisibilityChange}>
+                        <Ticker height={376}>
+                            {
+                                ({index}) => 
+
+                                    <div style={{display: 'flex', flexDirection: 'row', height: '376px'}}>
+                                        { this.items }
+                                    </div>     
+                            }
+                        </Ticker>
+                    </PageVisibility>
                     </div>
                     <div className="credo">
                         <div className="container">

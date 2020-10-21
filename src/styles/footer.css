@@ -28,3 +28,23 @@ footer {
 .footer_box__center img:hover {
     cursor: pointer;
 }
+
+@media(max-width: 1220px) {
+    .footer_box {
+        padding: 0 35px;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 360px) {
+    footer {
+        padding: 20px 0;
+    }
+    .footer_box {
+        font-size: 10px;
+        flex-direction: column;
+    }
+    .footer_box__center {
+        align-self: flex-end;
+    }
+}

@@ -8,10 +8,10 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.menuItems = [
-            {link: '/home', content: 'Главная'},
+            {link: '/', content: 'Главная'},
             {link: '/about', content: 'Обо мне'},
             {link: '/servicies', content: 'Услуги'},
-            {link: '/home', content: logo},
+            {link: '/', content: logo},
             {link: '/pholio', content: 'Портфолио'},
             {link: '/feedback', content: 'Отзывы'},
             {link: '/contacts', content: 'Контакты'}
@@ -25,15 +25,18 @@ class Header extends React.Component {
                     <ul>
                         {
                             this.menuItems.map((item, i) => {
-                                return <li key={`li-${i}`}>
-                                    <a href={`${item.link}`} className={window.location.href.indexOf(item.link) >= 0 ? 'active' : ''}>
-                                        {
-                                            item.content.indexOf('data:image') >= 0 ?
-                                                <img src={item.content} alt="LOGO"></img> :
-                                                item.content
-                                        }
-                                    </a>
-                                </li>
+                                let loc = window.location.pathname
+                                return (
+                                    <li key={`li-${i}`}>
+                                        <a href={`${item.link}`} className={loc === item.link || loc === item.link + '/' ? 'active' : ''}>
+                                            {
+                                                item.content.indexOf('data:image') >= 0 ?
+                                                    <img src={item.content} alt="LOGO"></img> :
+                                                    item.content
+                                            }
+                                        </a>
+                                    </li>
+                                )
                             })
                         }
                     </ul>
