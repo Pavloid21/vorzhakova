@@ -1,5 +1,5 @@
 import React from 'react';
-import Ticker from 'react-ticker'
+import Marquee from 'react-marquee-slider'
 import PageVisibility from 'react-page-visibility'
 import Footer from './Footer'
 import '../styles/home.css';
@@ -50,15 +50,9 @@ class Home extends React.Component {
                     </div>
                     <div className="runner-box">
                     <PageVisibility onChange={this.handleVisibilityChange}>
-                        <Ticker height={376}>
-                            {
-                                ({index}) => 
-
-                                    <div style={{display: 'flex', flexDirection: 'row', height: '376px'}}>
-                                        { this.items }
-                                    </div>     
-                            }
-                        </Ticker>
+                        <Marquee>
+                            {this.items}
+                        </Marquee>
                     </PageVisibility>
                     </div>
                     <div className="credo">
@@ -69,7 +63,6 @@ class Home extends React.Component {
                                 То, что вы поймали на пленке, запечатлено навсегда …<br />
                                 Оно помнит мелочи, даже после того, как Вы всё забыли ».<br />
                                 – Аарон Сискинд
-
                             </div>
                         </div>
                         <Footer />

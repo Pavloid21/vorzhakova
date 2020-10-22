@@ -19,10 +19,17 @@ class Header extends React.Component {
     }
 
     render() {
+        window.addEventListener('scroll', (event) => {
+            let header = document.querySelector('.header');
+            header.style.opacity = .55 + window.scrollY / 700
+        })
         return (
             <nav className="header">
                 <div className="header-body">
                     <ul>
+                        <li className='burger_item'>
+                            <div className="burger"></div>
+                        </li>
                         {
                             this.menuItems.map((item, i) => {
                                 let loc = window.location.pathname

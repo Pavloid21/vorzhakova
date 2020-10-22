@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: rgba(57, 55, 55, 0.55);
+    background: rgb(57, 55, 55);
+    opacity: 0.55;
     height: 114px;
     position: absolute;
     width: 100%;
@@ -47,6 +48,10 @@ ul li {
     align-items: center;
 }
 
+.burger_item {
+    display: none;
+}
+
 @media(max-width: 1220px) {
     .header-body, .container {
         padding: 0 35px;
@@ -54,7 +59,111 @@ ul li {
 }
 
 @media(max-width: 800px) {
-    .header li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(5), li:nth-child(6), li:nth-child(7){
+    .header ul {
+        position: relative;
+    }
+    .header li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(6), li:nth-child(7), li:nth-child(8){
         display: none;
+    }
+    .header li:nth-child(5) {
+        display: flex;
+        position: absolute;
+        align-self: center;
+        margin: 0 auto;
+        width: 100%;
+        justify-content: center;
+    }
+    .burger_item {
+        display: inline-flex;
+        z-index: 2;
+    }
+
+    .burger_item:hover {
+        cursor: pointer;
+    }
+
+    .burger {
+        height: 2px;
+        background-color: white;
+        width: 70px;
+    }
+
+    .burger::after {
+        content: '';
+        height: 2px;
+        background-color: white;
+        width: 70px;
+        display: block;
+        position: relative;
+        top: 10px;
+    }
+
+    .burger::before {
+        content: '';
+        height: 2px;
+        background-color: white;
+        width: 70px;
+        display: block;
+        position: relative;
+        top: -12px;
+    }
+}
+
+@media(max-width: 460px) {
+    .burger {
+        height: 2px;
+        background-color: white;
+        width: 40px;
+    }
+
+    .burger::after {
+        content: '';
+        height: 2px;
+        background-color: white;
+        width: 40px;
+        display: block;
+        position: relative;
+        top: 8px;
+    }
+
+    .burger::before {
+        content: '';
+        height: 2px;
+        background-color: white;
+        width: 40px;
+        display: block;
+        position: relative;
+        top: -10px;
+    }
+}
+
+@media(max-width: 360px) {
+    .burger {
+        height: 2px;
+        background-color: white;
+        width: 10px;
+    }
+
+    .burger::after {
+        content: '';
+        height: 2px;
+        background-color: white;
+        width: 10px;
+        display: block;
+        position: relative;
+        top: 2px;
+    }
+
+    .burger::before {
+        content: '';
+        height: 2px;
+        background-color: white;
+        width: 10px;
+        display: block;
+        position: relative;
+        top: -4px;
+    }
+    .header li:nth-child(5) img {
+            height: 27px;
     }
 }
