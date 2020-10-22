@@ -3,7 +3,6 @@ import Marquee from 'react-marquee-slider'
 import PageVisibility from 'react-page-visibility'
 import Footer from './Footer'
 import '../styles/home.css';
-import 'react-alice-carousel/lib/alice-carousel.css'
 
 class Home extends React.Component {
     constructor(props) {
@@ -49,11 +48,9 @@ class Home extends React.Component {
                         </button>
                     </div>
                     <div className="runner-box">
-                    <PageVisibility onChange={this.handleVisibilityChange}>
-                        <Marquee>
-                            {this.items}
-                        </Marquee>
-                    </PageVisibility>
+                    <Marquee>
+                        {this.items}
+                    </Marquee>
                     </div>
                     <div className="credo">
                         <div className="container">
