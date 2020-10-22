@@ -164,6 +164,10 @@ ul li {
         top: -4px;
     }
     .header li:nth-child(5) img {
-            height: 27px;
+        height: 27px;
+    }
+    .header li:nth-child(5) {
+        height: 27px;
+        align-items: baseline;
     }
 }
