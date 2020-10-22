@@ -18,13 +18,20 @@ class Header extends React.Component {
         ]
     }
 
+    burgerClick = (e) => {
+        let burger = document.querySelector('.burger')
+        let burgerItem = document.querySelector('.burger_item')
+        burger.classList.toggle('expand')
+        burgerItem.classList.toggle('expand')
+    }
+
     render() {
         window.addEventListener('scroll', (event) => {
             let header = document.querySelector('.header');
             header.style.opacity = .55 + window.scrollY / 700
         })
         return (
-            <nav className="header">
+            <nav className="header" onClick={this.burgerClick}>
                 <div className="header-body">
                     <ul>
                         <li className='burger_item'>
