@@ -21,8 +21,12 @@ class Header extends React.Component {
     burgerClick = (e) => {
         let burger = document.querySelector('.burger')
         let burgerItem = document.querySelector('.burger_item')
+        let header = document.querySelector('.header')
+        let navDropdown = document.querySelector('.nav_dropdown')
         burger.classList.toggle('expand')
         burgerItem.classList.toggle('expand')
+        header.classList.toggle('expand')
+        navDropdown.classList.toggle('show')
     }
 
     render() {
@@ -54,7 +58,24 @@ class Header extends React.Component {
                             })
                         }
                     </ul>
+                    <div class="nav_dropdown">
+                        <div className="header_body">
+                            {
+                                this.menuItems.map((item, i) => {
+                                    let loc = window.location.pathname
+                                    return item.content.indexOf('data:image') >= 0 ? null : (
+                                        <a href={`${item.link}`} className={loc === item.link || loc === item.link + '/' ? 'active' : ''}>
+                                            {
+                                                item.content
+                                            }
+                                        </a>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
                 </div>
+                
             </nav>
         )
     }

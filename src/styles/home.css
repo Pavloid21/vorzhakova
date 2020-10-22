@@ -140,10 +140,6 @@ body {
 
 @media(max-width: 360px) {
 
-    .header {
-        height: 27px;
-        overflow: hidden;
-    }
     .home {
         height: auto;
     }
