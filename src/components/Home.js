@@ -1,6 +1,5 @@
 import React from 'react';
 import Marquee from 'react-marquee-slider'
-import PageVisibility from 'react-page-visibility'
 import Footer from './Footer'
 import '../styles/home.css';
 

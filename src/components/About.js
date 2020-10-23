@@ -36,9 +36,10 @@ class About extends React.Component {
                                 <img src="images/24.png" alt="col2img"/>
                             </div>
                         </div>
+                        <h1>Обо мне</h1>
                     </div>
-                    <Footer />
                 </div>
+                <Footer />
             </div>
         )
     }
