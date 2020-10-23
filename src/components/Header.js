@@ -35,10 +35,10 @@ class Header extends React.Component {
             header.style.opacity = .55 + window.scrollY / 700
         })
         return (
-            <nav className="header" onClick={this.burgerClick}>
+            <nav className="header">
                 <div className="header-body">
                     <ul>
-                        <li className='burger_item'>
+                        <li className='burger_item' onClick={this.burgerClick}>
                             <div className="burger"></div>
                         </li>
                         {
@@ -58,13 +58,13 @@ class Header extends React.Component {
                             })
                         }
                     </ul>
-                    <div class="nav_dropdown">
+                    <div className="nav_dropdown">
                         <div className="header_body">
                             {
                                 this.menuItems.map((item, i) => {
                                     let loc = window.location.pathname
                                     return item.content.indexOf('data:image') >= 0 ? null : (
-                                        <a href={`${item.link}`} className={loc === item.link || loc === item.link + '/' ? 'active' : ''}>
+                                        <a href={`${item.link}`} key={`link${i}`} className={loc === item.link || loc === item.link + '/' ? 'active' : ''}>
                                             {
                                                 item.content
                                             }

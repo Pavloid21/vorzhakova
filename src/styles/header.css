@@ -75,6 +75,7 @@ ul li {
 
 .burger_item {
     display: none;
+    z-index: 100;
 }
 
 .burger_item:hover {
