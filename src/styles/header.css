@@ -271,13 +271,13 @@ ul li {
         margin: 2px 0;
     }
     .header {
-        height: 27px;
+        height: 40px;
     }
     .header li:nth-child(5) img {
-        height: 27px;
+        height: 40px;
     }
     .header li:nth-child(5) {
-        height: 27px;
+        height: 40px;
         align-items: baseline;
     }
 

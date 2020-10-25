@@ -9,6 +9,7 @@ import './App.css';
 import Header from './components/Header'
 import Home from './components/Home'
 import About from './components/About'
+import Servicies from './components/Services'
 
 function App() {
   return (
@@ -16,9 +17,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/about" component={About} />
-        <Route path="/servicies">
-          <div>Servicies</div>
-        </Route>
+        <Route path="/servicies" component={Servicies}/>
         <Route path="/pholio">
           <div>Pholio</div>
         </Route>
