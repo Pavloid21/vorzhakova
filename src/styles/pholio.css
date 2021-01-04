@@ -1,52 +1,51 @@
-
 .pholio {
-    margin-top: 114px;
-    padding-top: 50px;
-    color: black;
+  margin-top: 114px;
+  padding-top: 50px;
+  color: black;
 }
 
 .container header {
-    color: black;
-    background-color: white;
-    box-shadow: none    ;
+  color: black;
+  background-color: white;
+  box-shadow: none;
 }
 
 .react-tabs ul {
-    border-bottom: none;
-    display: flex;
-    flex-wrap: wrap;
+  border-bottom: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .react-tabs__tab {
-    font-size: 18px;
-    line-height: 25px;
-    max-width: 156px;
-    text-align: center;
-    padding: 12px 33px;
+  font-size: 18px;
+  line-height: 25px;
+  max-width: 156px;
+  text-align: center;
+  padding: 12px 33px;
 }
 
 .pholio .MuiTab-root {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
-    text-transform: none;
-    max-width: 156px;
-    font-size: 18px;
-    line-height: 25px;
-    letter-spacing: normal;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  max-width: 156px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: normal;
 }
 
 .pholio .MuiTabs-indicator {
-    background-color:  #C2A599;
-    height: 4px;
+  background-color: #c2a599;
+  height: 4px;
 }
 
 .pholio button[class*="Mui"] {
-    padding: 12px 33px;
+  padding: 12px 33px;
 }
 
-@media(max-width: 360px) {
-    .pholio button[class*="Mui"] {
-        font-size: 12px;
-        padding: 12px 15px;
-    }
+@media (max-width: 360px) {
+  .pholio button[class*="Mui"] {
+    font-size: 12px;
+    padding: 12px 15px;
+  }
 }

@@ -6,7 +6,7 @@ export default class Card extends Component {
         const { img, title } = this.props.data
         return (
             <div className="service_card">
-                <img src={img}/>
+                <img src={img} alt="card_img"/>
                 <desc>{title}</desc>
                 <button className="btn">Подробнее</button>
             </div>
