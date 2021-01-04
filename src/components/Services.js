@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "./Footer";
 import Card from "./views/Card";
 import "../styles/servicies.css";
 

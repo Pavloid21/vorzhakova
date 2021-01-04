@@ -3,7 +3,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
-import Footer from "./Footer";
 import "react-tabs/style/react-tabs.css";
 import "../styles/pholio.css";
 
