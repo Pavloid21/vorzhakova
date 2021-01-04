@@ -11,6 +11,13 @@ export default function Feedbacks() {
   const imgREF = useRef([]);
 
   const [items, setItems] = useState({ items: [] });
+  const [comments, setComment] = useState([
+    {
+      author: "Алёна Мальнева",
+      comment:
+        "Очень довольны с мужем, что выбрали именно этого фотографа! Современный дизайн как самой работы, так и её подачи! Хотелось бы нам отметить, что Екатерина к своей работе подходит очень творчески и каждый раз пробует что-то внести своё в каждую свадьбу. Фотографии нравятся всем. Все в восторге от наших фотографий, все на высшем уровне) Всем советуем Екатерину, она мастер своего дела)",
+    },
+  ]);
 
   useEffect(() => {
     fetch("https://randomuser.me/api/?results=10", {
@@ -83,6 +90,33 @@ export default function Feedbacks() {
             })()}
           />
         )}
+        <div className="comment">
+          <div>
+            <h2 className="author">{comments[0].author}</h2>
+            <article>{comments[0].comment}</article>
+          </div>
+        </div>
+        <div className="comment-form">
+          <h2>Оставьте свой отзыв</h2>
+          <form>
+            <div className="inline">
+              <div className="group">
+                <input type="text" required/>
+                <span className="bar"></span>
+                <label>Ваше имя</label>
+              </div>
+              <div className="group">
+                <input type="text" required/>
+                <span className="bar"></span>
+                <label>Ваше фамилия</label>
+              </div>
+            </div>
+            <div className="inline">
+              <textarea placeholder="Напишите отзыв..."></textarea>
+            </div>
+            <button className="btn">Опубликовать отзыв</button>
+          </form>
+        </div>
       </div>
     </div>
   );

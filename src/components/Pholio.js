@@ -97,7 +97,6 @@ export default class Pholio extends Component {
             );
           })}
         </div>
-        <Footer />
       </div>
     );
   }

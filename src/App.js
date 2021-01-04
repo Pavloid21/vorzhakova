@@ -8,6 +8,7 @@ import About from "./components/About";
 import Servicies from "./components/Services";
 import Pholio from "./components/Pholio";
 import Feedbacks from "./components/Feedbacks";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         </Route>
         <Route exact path="/" component={Home} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

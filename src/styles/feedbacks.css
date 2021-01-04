@@ -111,3 +111,135 @@
 .rec.rec-arrow:hover {
   background-color: transparent;
 }
+
+h2 {
+  margin: 0;
+  margin-block: 0;
+}
+
+article {
+  max-width: 670px;
+}
+
+.author {
+  font-size: 24pt;
+  font-family: "Georgia Italic", sans-serif;
+  margin-bottom: 25px;
+}
+
+.comment {
+  font-size: 18pt;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.comment-form h2 {
+  font-family: "Georgia Italic", sans-serif;
+  font-size: 36pt;
+  margin-bottom: 40px;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  width: 260px;
+  border: none;
+  border-bottom: 2px solid #B3B3B3;
+}
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  color: #B3B3B3;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 15px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top: -15px;
+  font-size: 14px;
+  color: #C2A599;
+}
+
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 280px;
+}
+.bar:before, .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #C2A599;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+textarea {
+  width: 100%;
+  max-width: 670px;
+  min-height: 330px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: #C2A599;
+  border: none;
+  margin-bottom: 50px;
+}
+
+textarea::placeholder {
+  color: #B3B3B3;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inline {
+  display: flex;
+  max-width: 670px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btn {
+  margin-top: 0;
+}
