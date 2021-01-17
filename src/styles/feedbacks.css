@@ -68,7 +68,7 @@
 }
 
 .rec-slider-container {
-  height: 267px;
+  height: 270px;
   display: flex;
   align-items: center;
 }
@@ -133,6 +133,7 @@ article {
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  margin-top: 40px;
 }
 
 .comment-form {
@@ -250,4 +251,119 @@ form {
 
 .btn.nomargin {
   margin-top: 0;
+}
+
+@media(min-width: 360px) {
+  .feedback {
+    margin-top: 65px;
+    padding: 0;
+  }
+  .author {
+    font-size: 15pt;
+    margin-bottom: 10px;
+  }
+  .comment-form h2 {
+    font-size: 15pt;
+    margin-bottom: 25px;
+  }
+  .slider_item img {
+    width: 48px;
+    height: 48px;
+  }
+  .inline {
+    display: block;
+  }
+  input {
+    font-size: 15pt;
+  }
+  .no_opacity img {
+    padding: 14px;
+  }
+
+  .rec.rec-arrow {
+    width: 20px;
+    height: 20px;
+    font-size: 10pt;
+    line-height: 10pt;
+    min-width: 20px;
+    padding: 0;
+  }
+  .rec-slider-container {
+    margin: 0 !important;
+    height: 100px;
+  }
+
+  .rec-carousel {
+    height: 100px !important;
+  }
+}
+
+@media(min-width: 375px) {
+  .feedback {
+    margin-top: 135px;
+    padding: 0;
+  }
+
+  .container > h1 {
+    font-size: 24pt;
+    line-height: 24pt;
+  }
+}
+
+@media(min-width: 768px) {
+  .slider_item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .rec-carousel {
+    height: 265px !important;
+  }
+  .rec-slider-container {
+    margin: 0 !important;
+    height: 265px;
+  }
+  .inline {
+    display: flex;
+  }
+}
+
+@media(min-width: 1200px) {
+  .feedback {
+    margin-top: 164px;
+  }
+  .slider_item img {
+    width: 150px;
+    height: 150px;
+  }
+  .no_opacity img {
+    padding: 30px;
+    border: 2px solid #c2a599;
+    border-radius: 50%;
+    transition-property: padding;
+    transition: 0.6s;
+  }
+  .container h1 {
+    font-size: 72px;
+    line-height: 82px;
+    margin: 0 0 50px 0;
+  }
+  .author {
+    font-size: 24pt;
+  }
+  .comment-form h2 {
+    font-size: 36pt;
+  }
+  .rec.rec-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20pt;
+    line-height: 20pt;
+    min-width: 40px;
+    padding: 0;
+  }
+  .rec-slider-container {
+    margin: 0 !important;
+    height: 270px;
+  }
 }

@@ -3,6 +3,21 @@ import React from "react";
 import "../styles/about.css";
 
 class About extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: [
+        { image: "about/images/11.png" },
+        { image: "about/images/12.png" },
+        { image: "about/images/13.png" },
+        { image: "about/images/14.png" },
+        { image: "about/images/21.png" },
+        { image: "about/images/22.png" },
+        { image: "about/images/23.png" },
+        { image: "about/images/24.png" },
+      ],
+    };
+  }
   render() {
     return (
       <div className="about">
@@ -35,22 +50,32 @@ class About extends React.Component {
                   событиях и красоте вашей жизни.
                 </article>
               </div>
-              <a href="#" className="blog_link">
+              {/* <a href="#" className="blog_link">
                 Перейти в личный блог
-              </a>
+              </a> */}
             </div>
             <div className="content_right">
               <div className="col1">
-                <img src="images/11.png" alt="col1img" />
-                <img src="images/12.png" alt="col1img" />
-                <img src="images/13.png" alt="col1img" />
-                <img src="images/14.png" alt="col1img" />
+                {this.state.images.map((item, index) => {
+                  return index < 4 ? (
+                    <img
+                      src={item.image.replace('about/', '')}
+                      key={`col1img${index}`}
+                      alt={`col1img${index}`}
+                    />
+                  ) : null;
+                })}
               </div>
               <div className="col2">
-                <img src="images/21.png" alt="col2img" />
-                <img src="images/22.png" alt="col2img" />
-                <img src="images/23.png" alt="col2img" />
-                <img src="images/24.png" alt="col2img" />
+              {this.state.images.map((item, index) => {
+                  return index > 3 ? (
+                    <img
+                      src={item.image.replace('about/', '')}
+                      key={`col2img${index}`}
+                      alt={`col2img${index}`}
+                    />
+                  ) : null;
+                })}
               </div>
             </div>
             <h1>Обо мне</h1>

@@ -3,7 +3,7 @@ import "../styles/contacts.css";
 import bgd from "../resources/contacts_bg.jpg";
 import vk from "../resources/icons/vk.svg";
 import insta from "../resources/icons/insta.svg";
-import facebook from "../resources/icons/facebook.svg";
+import telegram from "../resources/icons/telegram.svg";
 import {
   Checkbox,
   FormControlLabel,
@@ -46,7 +46,7 @@ export default function Contacts() {
           <div className="socials">
             <img src={vk} alt="vk" />
             <img src={insta} alt="insta" />
-            <img src={facebook} alt="facebook" />
+            <img src={telegram} alt="telegram" />
           </div>
         </div>
         <div className="flexbox">

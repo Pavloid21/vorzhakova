@@ -3,7 +3,7 @@ import "../styles/footer.css";
 
 import vk from "../resources/icons/vk.svg";
 import insta from "../resources/icons/insta.svg";
-import facebook from "../resources/icons/facebook.svg";
+import telegram from "../resources/icons/telegram.svg";
 
 class Footer extends React.Component {
   render() {
@@ -18,7 +18,7 @@ class Footer extends React.Component {
           <div className="footer_box__center">
             <img src={vk} alt="vk" />
             <img src={insta} alt="insta" />
-            <img src={facebook} alt="facebook" />
+            <img src={telegram} alt="telegram" />
           </div>
           <div className="footer_box__right">
             vorzhakova.photo@mail.ru
@@ -27,7 +27,7 @@ class Footer extends React.Component {
         </div>
       </footer>
     );
-  }
+  }telegram
 }
 
 export default Footer;
