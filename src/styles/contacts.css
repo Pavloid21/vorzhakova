@@ -41,7 +41,7 @@ hr {
 .flexbox {
   display: flex;
   justify-content: center;
-  margin-bottom: 424px;
+  margin-bottom: 624px;
 }
 
 @media(max-width: 800px) {
@@ -68,11 +68,17 @@ hr {
   .form-container{
     padding: 25px 50px;
   }
+  .flexbox {
+    margin-bottom: 400px;
+  }
 }
 
 @media(max-width: 360px) {
   .contacts{
     margin-top: 40px;
     padding-top: 25px;
+  }
+  .flexbox {
+    margin-bottom: 360px;
   }
 }

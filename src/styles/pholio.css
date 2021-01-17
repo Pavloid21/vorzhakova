@@ -44,6 +44,10 @@
 }
 
 @media (max-width: 360px) {
+  .pholio {
+    margin-top: 40px;
+    padding-top: 25px;
+  }
   .pholio button[class*="Mui"] {
     font-size: 12px;
     padding: 12px 15px;
