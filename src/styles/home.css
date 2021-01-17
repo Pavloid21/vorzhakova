@@ -78,7 +78,16 @@ body {
 }
 
 .hero {
-  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  height: calc(100vh - 114px);
+}
+
+.hero .btn {
+  margin-bottom: 0;
+  max-width: 350px;
 }
 
 .runner-box {

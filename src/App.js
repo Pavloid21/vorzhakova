@@ -9,6 +9,7 @@ import Servicies from "./components/Services";
 import Pholio from "./components/Pholio";
 import Feedbacks from "./components/Feedbacks";
 import Footer from "./components/Footer";
+import Contacts from "./components/Contacts";
 
 function App() {
   return (
@@ -19,9 +20,7 @@ function App() {
         <Route path="/servicies" component={Servicies} />
         <Route path="/pholio" component={Pholio} />
         <Route path="/feedback" component={Feedbacks} />
-        <Route path="/contacts">
-          <div>Contacts</div>
-        </Route>
+        <Route path="/contacts" component={Contacts} />
         <Route exact path="/" component={Home} />
       </Switch>
       <Footer />

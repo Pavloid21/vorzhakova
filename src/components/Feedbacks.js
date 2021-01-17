@@ -7,6 +7,8 @@ export default function Feedbacks() {
   useEffect(() => {
     document.body.style.backgroundColor = "#FFF";
   });
+  let resetTimeout;
+  const carouselRef = useRef(null);
 
   const imgREF = useRef([]);
 
@@ -56,16 +58,31 @@ export default function Feedbacks() {
     handleCarouselChange({ index: 2 }, []);
   });
 
+  const handleNext = ({ index }) => {
+    if (index === items.length + 1) {
+      carouselRef.current.goTo(1);
+    }
+  };
+
+  const handlePrev = ({ index }) => {
+    if (index === 0) {
+      carouselRef.current.goTo(items.length);
+    }
+  };
+
   return (
     <div className="feedback">
       <div className="container">
         <h1>Отзывы клиентов</h1>
         {items.length && (
           <Carousel
+            ref={carouselRef}
             itemsToShow={3}
             pagination={false}
             onChange={handleCarouselChange}
             initialActiveIndex={2}
+            onNextEnd={handleNext}
+            onPrevEnd={handlePrev}
             children={(() => {
               return [null, null]
                 .concat(items)
@@ -97,16 +114,16 @@ export default function Feedbacks() {
           </div>
         </div>
         <div className="comment-form">
-          <h2>Оставьте свой отзыв</h2>
           <form>
+            <h2>Оставьте свой отзыв</h2>
             <div className="inline">
               <div className="group">
-                <input type="text" required/>
+                <input type="text" required />
                 <span className="bar"></span>
                 <label>Ваше имя</label>
               </div>
               <div className="group">
-                <input type="text" required/>
+                <input type="text" required />
                 <span className="bar"></span>
                 <label>Ваше фамилия</label>
               </div>
@@ -114,7 +131,7 @@ export default function Feedbacks() {
             <div className="inline">
               <textarea placeholder="Напишите отзыв..."></textarea>
             </div>
-            <button className="btn">Опубликовать отзыв</button>
+            <button className="btn nomargin">Опубликовать отзыв</button>
           </form>
         </div>
       </div>

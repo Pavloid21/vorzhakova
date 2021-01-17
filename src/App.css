@@ -54,10 +54,28 @@ body {
   }
 }
 
-html,
-body,
-#root {
-  height: 100%;
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: #C2A599 !important;
+}
+
+.MuiTypography-body1 {
+  font-size: 14px !important;
+  font-family: "Open Sans", sans-serif !important;
+  letter-spacing: normal !important;
+}
+
+.MuiInputBase-root, .MuiFormLabel-root {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 18px !important;
+  color: #B3B3B3 !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: #C2A599 !important;
+}
+
+.MuiInput-underline:after {
+  border-bottom: 2px solid #C2A599 !important;
 }
 
 .container {
