@@ -17,6 +17,11 @@ class About extends React.Component {
         { image: "about/images/24.png" },
       ],
     };
+    this.imgList = this.state.images.map((item, index) => {
+      return (
+        <img src={item.image.replace("/about", "")} key={`colIMG${index}`} alt="Personal" />
+      );
+    });
   }
   render() {
     return (
@@ -56,25 +61,13 @@ class About extends React.Component {
             </div>
             <div className="content_right">
               <div className="col1">
-                {this.state.images.map((item, index) => {
-                  return index < 4 ? (
-                    <img
-                      src={item.image.replace('about/', '')}
-                      key={`col1img${index}`}
-                      alt={`col1img${index}`}
-                    />
-                  ) : null;
+                {this.imgList.map((item, index) => {
+                  return index < 4 ? item : null;
                 })}
               </div>
               <div className="col2">
-              {this.state.images.map((item, index) => {
-                  return index > 3 ? (
-                    <img
-                      src={item.image.replace('about/', '')}
-                      key={`col2img${index}`}
-                      alt={`col2img${index}`}
-                    />
-                  ) : null;
+              {this.imgList.map((item, index) => {
+                  return index > 3 ? item : null;
                 })}
               </div>
             </div>
